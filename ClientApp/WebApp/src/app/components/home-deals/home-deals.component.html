@@ -1,0 +1,16 @@
+<div class="home-deals">
+    <h2>Featured Appliances Deals</h2>
+    <div class="deals-list row">
+        <div class="col-md-4 mb-3" *ngFor="let deal of deals">
+            <div class="card">
+                <img class="card-img-top" [src]="deal.image" alt="{{ deal.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ deal.title }}</h5>
+                    <p class="card-text">{{ deal.description }}</p>
+                    <p class="card-text"><strong>{{ deal.price | currency }}</strong></p>
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

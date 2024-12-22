@@ -1,0 +1,12 @@
+<div class="mortgage-deals">
+    <h2>Mortgage Deals</h2>
+    <div *ngFor="let deal of mortgageDeals" class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">{{ deal.name }}</h3>
+            <p class="card-text">Interest Rate: {{ deal.interestRate }}%</p>
+            <p class="card-text">Term: {{ deal.term }} years</p>
+            <p class="card-text">Monthly Payment: {{ deal.monthlyPayment | currency }}</p>
+            <button class="btn btn-primary" (click)="applyForDeal(deal)">Apply Now</button>
+        </div>
+    </div>
+</div>
